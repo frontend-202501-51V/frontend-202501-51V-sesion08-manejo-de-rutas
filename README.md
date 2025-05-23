@@ -26,31 +26,6 @@ Al finalizar este workshop, serás capaz de:
 
 ---
 
-## 🗺️ Mapa de progresión de conocimientos
-
-### Bloque 1: Fundamentos de Routing
-
-- [Introducción al Routing](1-routing/1-introduccion.md)
-- [Configuración básica de rutas](1-routing/2-configuracion-basica.md)
-- [Enlaces y navegación](1-routing/3-enlaces-navegacion.md)
-- [Parámetros de ruta](1-routing/4-parametros.md)
-- [Query Params y fragmentos](1-routing/5-query-params.md)
-
-### Bloque 2: Routing avanzado
-
-- [Rutas hijas y anidadas](2-avanzado/1-rutas-hijas.md)
-- [Redirecciones y rutas comodín](2-avanzado/2-redirecciones.md)
-- [Guards: protección de rutas](2-avanzado/3-guards.md)
-- [Resolves: precarga de datos](2-avanzado/4-resolves.md)
-- [Lazy Loading de módulos](2-avanzado/5-lazy-loading.md)
-
-### Bloque 3: Integración y buenas prácticas
-
-- [Integración con componentes](3-integracion/1-integracion-componentes.md)
-- [Animaciones de rutas](3-integracion/2-animaciones.md)
-
----
-
 ## 📚 Rutas de aprendizaje y práctica guiada
 
 La ruta de aprendizaje está organizada en tres bloques temáticos.  

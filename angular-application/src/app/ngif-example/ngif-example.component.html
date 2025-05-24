@@ -1,0 +1,46 @@
+<p>mostrar una alerta por stock bajo</p>
+<p *ngIf="producto.stock < 5" >!!Atencion quedan pocas unidades para ti de {{ producto.nombre  }}</p>
+
+<hr>
+
+<p>mostrar informacion solo si el usuario tiene nombre</p>
+<!-- los 2 verdaderos entonces verdadero -->
+ <!-- si uno es falso entonces es falso -->
+<div *ngIf="usuario && usuario.nombre">
+  <p>Bienvenido, {{ usuario.nombre }}</p>
+</div>
+
+<hr>
+
+<p>Mostrar un mensaje si un arreglo esta vacio</p>
+<p *ngIf="tareas.length === 0">No hay tareas pendientes</p>
+
+<hr >
+
+<p>mostrar un elemento segun su valor numerico</p>
+<p *ngIf="puntos >= 10" >!Has ganado un premio!</p>
+
+<hr >
+
+<p  *ngIf="mostrarMensaje">!Hola Angular!</p>
+
+<!-- esta negando al false entonces es true -->
+<button *ngIf="!false">Iniciar Sesión</button>
+
+<br />
+<p>mostrar un boton que oculte o muestra</p>
+<button (click)="actualizarCargado()">Click</button>
+<!-- se mostraria si es TRUE -->
+<p *ngIf="cargado; else cargando">
+  Datos cargados
+  <!-- {{ cargado ? 'Reiniciar carga' : 'Simular Carga exitosa'  }} -->
+</p>
+<!-- o sino se muestra la plantilla -->
+<ng-template #cargando>
+  <p>se esta cargando...</p>
+</ng-template>
+
+<!-- <p>ngif-example works!</p>
+<div>
+  <p>este contenido aparece automaticamente</p>
+</div> -->

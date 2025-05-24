@@ -1,0 +1,20 @@
+<p>pipe para pasar un numero a decimales</p>
+<p>Decimal: {{ decimal | number:'1.2-2' }}</p>
+
+<hr>
+
+<p>se solicita transformar un valor a moneda de peru, PEN</p>
+<p>precio: {{ precio | currency:'S/.':'symbol' }}</p>
+
+<hr>
+
+<p>se quiere formatear una fecha adecuadamente</p>
+{{ fecha | date }}
+<!-- {{ fecha }} -->
+<hr>
+
+<p>se quiere pasar a mayuscula un texto</p>
+{{ nombre | uppercase }}
+<p>se quiere pasar a minuscula un texto</p>
+<br>
+{{ nombreEnMayuscula | lowercase }}

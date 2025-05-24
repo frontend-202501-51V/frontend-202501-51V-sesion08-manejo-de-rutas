@@ -1,0 +1,91 @@
+<p>ngfor con animaciones</p>
+<ul>
+  <!-- fade -> desvanecer -->
+   <!-- in -> entrada -->
+  <li *ngFor="let mensaje of mensajes" [@fadeIn]>
+    {{ mensaje}}
+  </li>
+</ul>
+
+<hr>
+
+<p>uso de trackBy para optimizaciones</p>
+<!-- mejora el rendimiento y se deberia usar para indicar que un registro, fila es unico -->
+<ul>
+  <li *ngFor="let item of items; trackBy: trackById">{{ item.nombre}}</li>
+</ul>
+
+<hr>
+
+<p>Anidaciones dinamicas / tablas</p>
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let columna of columnas">{{columna}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fila of filas">
+      <td *ngFor="let columna of columnas">
+        <!-- en el primer registro -->
+        <!-- fila['nombre'] -> ana -->
+         <!-- fila['edad'] -> 29 -->
+        {{ fila[columna] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+
+<p>Mostrar lista de usuario con mensaje si no hay usuarios</p>
+<ul>
+  <li *ngFor="let usuario of usuarios">
+    {{ usuario.nombre }} - {{usuario.email}}
+  </li>
+</ul>
+<p *ngIf="usuarios.length === 0">No hay usuarios registrados. :(</p>
+<hr>Tareas
+
+<p>mostrar una lista con condicion usando tambien ngIf</p>
+<table class="table">
+  <thead>
+    <tr>
+      <td>Tareas</td>
+    </tr>
+  </thead>
+  <!-- no puedo usar al mismo tiempo ngIf y ngFor ,solo uno -->
+  <tbody>
+    <tr *ngFor="let tarea of tareas">
+    <td *ngIf="tarea.completada">
+      <span>✔️</span>
+    {{ tarea.descripcion  }}
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<p>usando el indice para generar una numeracion</p>
+<ul>
+  <!-- i se usara como el indice de la lista -->
+  <li *ngFor="let fruta of frutas; let i = index">
+    {{ i + 1  }}.  {{ fruta }}
+  </li>
+</ul>
+<hr>
+
+<p>mostrar una lista de objetos con propiedades</p>
+<ul>
+  <!-- me mostraria cada uno de los productos con su precio -->
+  <li *ngFor="let producto of productos">
+    {{ producto.nombre  }} - S/. {{ producto.precio  }}
+  </li>
+</ul>
+
+ <hr>
+
+<p>mostrar una lista simple de nombres</p>
+<ul>
+  <li *ngFor="let nombre of nombres">{{ nombre  }}</li>
+</ul>
